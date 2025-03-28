@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CubeConnect - Master the Cube</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #2a9d8f, #264653);
+            min-height: 100vh;
+        }
+        .hero-pattern {
+            background-image: url('https://images.unsplash.com/photo-1591991564021-0662a8573199?auto=format&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="text-white">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-effect">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/logos%2Fcolor%20logo.png?alt=media&token=a2986ddc-4550-42cb-854c-238be2f0e0be" alt="CubeConnect Logo" class="h-12">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="hover:text-yellow-300 transition">Home</a>
+                    <a href="#about" class="hover:text-yellow-300 transition">About</a>
+                    <a href="#programs" class="hover:text-yellow-300 transition">Programs</a>
+                    <a href="#events" class="hover:text-yellow-300 transition">Events</a>
+                    <a href="#gallery" class="hover:text-yellow-300 transition">Gallery</a>
+                    <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+                </div>
+                <button class="md:hidden" onclick="toggleMenu()">
+                    <i class="bi bi-list text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden glass-effect">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="block hover:text-yellow-300">Home</a>
+                <a href="#about" class="block hover:text-yellow-300">About</a>
+                <a href="#programs" class="block hover:text-yellow-300">Programs</a>
+                <a href="#events" class="block hover:text-yellow-300">Events</a>
+                <a href="#gallery" class="block hover:text-yellow-300">Gallery</a>
+                <a href="#contact" class="block hover:text-yellow-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="glass-effect rounded-lg p-8 md:p-12 max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Master the Cube with CubeConnect</h1>
+                <p class="text-lg mb-8">Join our community and learn to solve Rubik's cubes from experts!</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button class="bg-yellow-400 text-gray-900 px-8 py-3 rounded-full hover:bg-yellow-300 transition">Book a Session</button>
+                    <button class="border-2 border-white px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition">Explore Events</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Programs</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program Cards -->
+                <div class="glass-effect glass-card rounded-lg p-6">
+                    <i class="bi bi-laptop text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Online Sessions</h3>
+                    <p class="mb-4">Learn from anywhere with our interactive online classes.</p>
+                    <button class="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full">Book Now</button>
+                </div>
+                <!-- Add more program cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Upcoming Events</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Cards -->
+                <div class="glass-effect glass-card rounded-lg p-6">
+                    <div class="mb-4">
+                        <h3 class="text-xl font-bold">Speed Cubing Championship</h3>
+                        <p class="text-sm">December 15, 2023</p>
+                    </div>
+                    <p class="mb-4">Join us for an exciting speed cubing competition with amazing prizes!</p>
+                    <button class="bg-yellow-400 text-gray-900 px-6 py-2 rounded-full">Register Now</button>
+                </div>
+                <!-- Add more event cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-effect py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <img src="https://firebasestorage.googleapis.com/v0/b/widecanvas-d0dd4.appspot.com/o/logos%2Fcolor%20logo.png?alt=media&token=a2986ddc-4550-42cb-854c-238be2f0e0be" alt="CubeConnect Logo" class="h-12 mb-4">
+                    <p>Making cube solving fun and accessible for everyone.</p>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <div class="space-y-2">
+                        <a href="#about" class="block hover:text-yellow-300">About Us</a>
+                        <a href="#programs" class="block hover:text-yellow-300">Programs</a>
+                        <a href="#events" class="block hover:text-yellow-300">Events</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-yellow-300"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-300"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-yellow-300"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-white/20">
+                <p>&copy; 2023 CubeConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
